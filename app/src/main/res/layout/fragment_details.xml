@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".recipesanddrinks.view.fragments.DetailsFragment">
+
+
+        <ImageView
+            android:id="@+id/foodImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/recipe"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/foodName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:fontFamily="@font/ibm_plex_serif"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/foodImage"
+            app:layout_constraintEnd_toEndOf="@+id/foodImage"
+            app:layout_constraintStart_toStartOf="@+id/foodImage" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/myCard"
+            style="@style/CardViewStyle"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/foodImage">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/categorY"
+                    style="@style/TextviewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/category_"
+                    app:layout_constraintStart_toStartOf="@id/constText"
+                    app:layout_constraintTop_toTopOf="@id/constText" />
+
+                <TextView
+                    android:id="@+id/categoryName"
+                    style="@style/TextviewStyleBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text=" "
+                    app:layout_constraintStart_toStartOf="@id/constText"
+                    app:layout_constraintTop_toBottomOf="@id/categorY" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/myCard2"
+            style="@style/CardViewStyle"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/foodImage">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/countrY"
+                    style="@style/TextviewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/country_"
+                    app:layout_constraintStart_toStartOf="@id/constText1"
+                    app:layout_constraintTop_toTopOf="@id/constText1" />
+
+                <TextView
+                    android:id="@+id/countryName"
+                    style="@style/TextviewStyleBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    app:layout_constraintStart_toStartOf="@id/constText1"
+                    app:layout_constraintTop_toBottomOf="@id/countrY" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/instructoin_"
+            style="@style/TextviewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/instructions_"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/watchOnYoutube" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/instructCard"
+            style="@style/CardViewStyle"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/instructoin_">
+
+            <TextView
+                android:id="@+id/instructionText"
+                style="@style/TextviewStyleBlack"
+                android:layout_width="290dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text=" " />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/ingredient_"
+            style="@style/TextviewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/ingredient_"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/instructCard" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ingridCard"
+            style="@style/CardViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ingredient_"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ingConst"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/ingredientName"
+                    style="@style/TextviewBlack"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text=" "
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/ingConst"
+                    app:layout_constraintEnd_toStartOf="@id/ingredientWeight"
+                    app:layout_constraintStart_toStartOf="@id/ingConst"
+                    app:layout_constraintTop_toTopOf="@id/ingConst" />
+
+                <TextView
+                    android:id="@+id/ingredientWeight"
+                    style="@style/TextviewBlack"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintBottom_toBottomOf="@id/ingConst"
+                    app:layout_constraintEnd_toEndOf="@id/ingConst"
+                    app:layout_constraintStart_toEndOf="@id/ingredientName"
+                    app:layout_constraintTop_toTopOf="@id/ingConst" />
+
+<!--                <androidx.constraintlayout.widget.Barrier-->
+<!--                    android:id="@+id/barier1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:barrierDirection="bottom"-->
+<!--                    app:constraint_referenced_ids="ingredientWeight,ingredientName" />-->
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/watchOnYoutube"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/youtube_button_style"
+            android:drawableStart="@drawable/ic_play_arrow_youtube_24dp"
+            android:gravity="start|center"
+            android:text="@string/youtube"
+            android:textColor="#FF0000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/myCard"
+             />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

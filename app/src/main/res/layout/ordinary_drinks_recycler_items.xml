@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent"
+    android:elevation="8dp"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_lay"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/ordinary_drinks_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/drinks_ordinary_name"
+                android:layout_margin="4dp"
+                tools:src="@mipmap/ic_launcher"
+                android:translationZ="2dp"/>
+            <TextView
+                android:id="@+id/drinks_ordinary_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text=""
+                android:gravity="center"
+                android:textFontWeight="100"
+                app:layout_constraintStart_toStartOf="@id/constraint_lay"
+                app:layout_constraintEnd_toEndOf="@id/constraint_lay"
+                app:layout_constraintBottom_toBottomOf="@id/constraint_lay"
+                android:layout_marginBottom="3dp"
+                tools:text="Drink"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>
